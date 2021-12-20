@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/job-post-formatter/static/css/main.2c780f68.css",
+    "main.js": "/job-post-formatter/static/js/main.8faafed3.js",
+    "static/js/787.316285a3.chunk.js": "/job-post-formatter/static/js/787.316285a3.chunk.js",
+    "index.html": "/job-post-formatter/index.html",
+    "main.2c780f68.css.map": "/job-post-formatter/static/css/main.2c780f68.css.map",
+    "main.8faafed3.js.map": "/job-post-formatter/static/js/main.8faafed3.js.map",
+    "787.316285a3.chunk.js.map": "/job-post-formatter/static/js/787.316285a3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2c780f68.css",
+    "static/js/main.8faafed3.js"
+  ]
+}
