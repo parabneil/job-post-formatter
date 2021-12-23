@@ -6,7 +6,10 @@ const AllSarkariNaukri = (props) => {
       <h2 style={{ textAlign: "center" }}>ALL SARKARI NAUKRI</h2>
       <div class="postBody">
         <h1>
-          <span class="title"></span>
+          <span class="title">
+            {props.post.organisationName} Recruitment - {props.post.noOfPosts}{" "}
+            {props.post.postName} Posts - {props.post.shortEducation} Apply Now
+          </span>
         </h1>
         <div style={{ overflowY: "hidden" }}>
           <p>
@@ -15,37 +18,43 @@ const AllSarkariNaukri = (props) => {
               format='Y']:
             </strong>
             {props.post.organisationName} has released the official notification
-            for Senior Course Assistant Posts. The selection of candidates will
-            be done through the followed on Interview. So, candidates who aspire
-            to apply can now apply for a job through the official link given
-            below.
+            for {props.post.postName} Posts. The selection of candidates will be
+            done through the followed on {props.post.selectionProcess}. So,
+            candidates who aspire to apply can now apply for a job through the
+            official link given below.
           </p>
           <p>
-            Education qualification to apply for this job is Graduate, Degree
-            Pass. After getting selected candidates can get payments Rs.
-            72,600/- PM. PGIMER has started accepting an application form 27th
-            November 2021 and 10th December 2021. So, candidates who need to
-            apply for this jobs kindly apply as soon as possible.
+            Education qualification to apply for this job is{" "}
+            {props.post.shortEducation} Pass. After getting selected candidates
+            can get payments {props.post.payScale}.{" "}
+            {props.post.organisationName} has started accepting an application
+            from {props.post.startDate} to {props.post.lastDate}. So, candidates
+            who need to apply for this jobs kindly apply as soon as possible.
           </p>
-          <h2>Eligibility Criteria for PGIMER Recruitment 2021</h2>
+          <h2>
+            Eligibility Criteria for {props.post.organisationName} Recruitment
+          </h2>
           <p>
             The Eligibility criteria for Education Qualification, Age Limit,
             Salary, Grade pay&nbsp;is as follows:
           </p>
           <h3>Education qualification:</h3>
           <p>
-            <strong>Senior Course Assistant Posts:</strong>
-            MBA,&nbsp;MD&nbsp;Pass from recognized University.
+            <strong>{props.post.postName} Posts:</strong>
+            {props.post.education} or its equivalent qualification from a
+            recognized Board / University.
           </p>
           <p>
-            <strong>Total Number of Vacancies: </strong>01 Vacancies.
+            <strong>Total Number of Vacancies: </strong>
+            {props.post.noOfPosts} Vacancies.
           </p>
           <p>
             <strong>Selection Process:&nbsp;</strong>Selection of the candidates
-            will be totally based on the Interview.
+            will be totally based on the {props.post.selectionProcess}.
           </p>
           <p>
-            <strong>Job Location:</strong> The job Location in Chandigarh.
+            <strong>Job Location:</strong> The job Location in{" "}
+            {props.post.postLocation}.
           </p>
           <p>
             After getting Selected candidates can get huge salary packages as
@@ -55,7 +64,7 @@ const AllSarkariNaukri = (props) => {
             <tbody>
               <tr>
                 <td width="257">Senior Course Assistant</td>
-                <td width="186">&nbsp; &nbsp; &nbsp; Rs. 72,600/- PM</td>
+                <td width="186">&nbsp; &nbsp; &nbsp; {props.post.payScale}</td>
                 <td width="97">
                   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -
                 </td>
@@ -63,46 +72,42 @@ const AllSarkariNaukri = (props) => {
             </tbody>
           </table>
           <h3>Age Limit:</h3>
+          <p>Age Limit for the post of {props.post.postName} Vacancies.</p>
           <p>
-            Age Limit for the post of Senior Course Assistant Posts Vacancies.
+            <strong>{props.post.postName} Posts</strong> – The Candidates age
+            limit is minimum of {props.post.minAgeLimit} years and maximum of{" "}
+            {props.post.maxAgeLimit} years as on {props.post.ageRefDate}.
           </p>
+          <h2>{props.post.organisationName} Recruitment Application Fees</h2>
           <p>
-            <strong>Senior Course Assistant Posts</strong> – The Candidates age
-            limit is maximum 45 years.
+            {props.post.postName} Posts, {props.post.applicationFees}.
           </p>
-          <h2>PGIMER Recruitment Application Fees 2021</h2>
-          <p>
-            Senior Course Assistant Posts, Candidates have to pay an application
-            fee. The PWD (Persons with Disabilities) candidates are exempted
-            from paying any application fees.
-          </p>
-          <p>The Candidates have to pay an application Fees is as per rules.</p>
-          <h3>How to Apply for PGIMER Recruitment:</h3>
+          <h3>How to Apply for {props.post.organisationName} Recruitment:</h3>
           <p>
             Candidates who fulfil the required Eligibility may send their
             Application form to the given address.
           </p>
           <p>
-            <strong>email- </strong>recruitment.htapgi@gmail.com
+            <strong>email- </strong>recruitment@gmail.com.
           </p>
           <p>
-            <strong>Advt Details</strong>:
+            <strong>Advt Details:</strong>
             <a
-              href="https://www.allsarkarinaukri.com/wp-content/uploads/2021/12/pgimer-senior-course-assistant-post-advt-details-a0d6d9.pdf"
+              href={props.post.officialNotification}
               target="_blank"
               rel="noopener noreferrer"
-              data-mce-href="https://www.allsarkarinaukri.com/wp-content/uploads/2021/12/pgimer-senior-course-assistant-post-advt-details-a0d6d9.pdf"
+              data-mce-href={props.post.officialNotification}
             >
               Click Here
             </a>
           </p>
           <p>
-            <b>Official Website:</b>
+            <strong>Application Form:</strong>
             <a
-              href="pgimer.edu.in"
+              href={props.post.applicationForm}
               target="_blank"
               rel="noopener noreferrer"
-              data-mce-href="pgimer.edu.in"
+              data-mce-href={props.post.applicationForm}
             >
               Click Here
             </a>

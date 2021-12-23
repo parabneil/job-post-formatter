@@ -6,33 +6,34 @@ const SarkariNaukriUpdate = (props) => {
       <h2 style={{ textAlign: "center" }}>SARKARI NAUKRI UPDATE</h2>
       <div class="postBody">
         <h1>
-          <span class="title"></span>
+          <span class="title">
+            {props.post.organisationName} Recruitment - {props.post.noOfPosts}{" "}
+            {props.post.postName} Posts - {props.post.shortEducation} Apply Now
+          </span>
         </h1>
         <div style={{ overflowY: "hidden" }}>
           <p>
             {props.post.organisationName} Recruitment [current_date format='Y']
-            find employees for the post of Various Junior Research Fellow
-            Vacancies in Roorkee (Uttarakhand). Employment job sites publish the
-            notification and done the Job posting on job search board. This is a
-            great chance for interested candidates who are looking for Sarkari
-            Naukri / Government Jobs. They all can apply online mode before or
-            on Last Date 17th December 2021.
+            find employees for the post of {props.post.noOfPosts}{" "}
+            {props.post.postName} Vacancies in {props.post.postLocation}.
+            Employment job sites publish the notification and done the Job
+            posting on job search board. This is a great chance for interested
+            candidates who are looking for Sarkari Naukri / Government Jobs.
+            They all can apply online mode before or on Last Date{" "}
+            {props.post.lastDate}.
           </p>
           <p>
             All Govt job applicants can apply through online applications or
-            offline mode through employee search sites for the Junior Research
-            Fellow post from the official job posting website. Get complete
-            information regarding this employee search Sarkari Naukri i.e. age
-            limit, qualification, selection procedure, pay scale (pay band), how
-            to apply, Syllabus &amp; exam pattern, written test, examination
-            date, application fees are given below.
+            offline mode through employee search sites for the{" "}
+            {props.post.postName} posts from the official job posting website.
+            Get complete information regarding this employee search Sarkari
+            Naukri i.e. age limit, qualification, selection procedure, pay scale
+            (pay band), how to apply, Syllabus &amp; exam pattern, written test,
+            examination date, application fees are given below.
           </p>
-          <h2>IIT employee search Detail.</h2>
+          <h2>{props.post.organisationName} employee search Detail.</h2>
           <p>
-            <strong>Advt. No.:</strong> 15/2021
-          </p>
-          <p>
-            <strong>Job Location</strong>: Roorkee (Uttarakhand)
+            <strong>Job Location</strong>: {props.post.postLocation}.
           </p>
           <p>
             <strong>Job Posting Details:</strong>
@@ -40,24 +41,25 @@ const SarkariNaukriUpdate = (props) => {
           <ul>
             <li>
               <p>
-                <strong>Post Name:</strong> Junior Research Fellow
+                <strong>Post Name:</strong> {props.post.postName}.
               </p>
             </li>
             <li>
               <p>
-                <strong>No of Vacancy:</strong> Various Posts
+                <strong>No of Vacancy:</strong> {props.post.noOfPosts} Posts.
               </p>
             </li>
             <li>
               <p>
-                <strong>Pay Scale: </strong>Rs. 31,000/- Per Month.
+                <strong>Pay Scale: </strong>
+                {props.post.payScale}.
               </p>
             </li>
           </ul>
           <p>
             <strong>Categories Wise&nbsp;employee search:&nbsp;&nbsp;</strong>
           </p>
-          <p>For Junior Research Fellow</p>
+          <p>For {props.post.postName}</p>
           <ul>
             <li>
               For Category wise distribution check the official notification
@@ -65,7 +67,10 @@ const SarkariNaukriUpdate = (props) => {
             </li>
           </ul>
           <p>
-            <strong>Eligibility Criteria for IIT Job Posting:</strong>
+            <strong>
+              Eligibility Criteria for {props.post.organisationName} Job
+              Posting:
+            </strong>
           </p>
           <ul>
             <li>
@@ -75,9 +80,10 @@ const SarkariNaukriUpdate = (props) => {
             </li>
             <li>
               <p>
-                <strong>For Junior Research Fellow:</strong> M.Sc., M.Tech.
-                Degree from a recognized University. or any equivalent
-                qualification recognized as such by the Central Government.
+                <strong>For {props.post.postName}:</strong>{" "}
+                {props.post.education} from a recognized University. or any
+                equivalent qualification recognized as such by the Central
+                Government.
               </p>
             </li>
             <li>
@@ -87,7 +93,8 @@ const SarkariNaukriUpdate = (props) => {
             </li>
             <li>
               <p>
-                <strong>Age Limit:</strong> 20 to 28 years (As on 01.04.2016).
+                <strong>Age Limit:</strong> {props.post.minAgeLimit} to{" "}
+                {props.post.maxAgeLimit} years (As on {props.post.ageRefDate}).
               </p>
             </li>
           </ul>
@@ -114,19 +121,19 @@ const SarkariNaukriUpdate = (props) => {
             </li>
           </ul>
           <p>
-            <strong>Selection Process:</strong> Selection will be made on
-            Interview.
+            <strong>Selection Process:</strong> Selection will be made on{" "}
+            {props.post.selectionProcess}.
           </p>
           <p>
-            <strong>Application Fee:</strong>&nbsp;General and
-            OBC&nbsp;candidates have to pay&nbsp;Rs. 600/- and&nbsp;Rs. 100/-
-            for SC/ST/ PWD/XS candidates through Online by using a debit card/
-            credit card/ Internet Banking etc.
+            <strong>Application Fee:</strong>&nbsp;{props.post.applicationFees}.
           </p>
           <p>
-            How to Apply IIT<strong>&nbsp;</strong>employee search: Interested
-            Candidates may apply online through IIT website between 07.12.2021
-            to 17.12.2021.
+            <strong>
+              How to Apply {props.post.organisationName}&nbsp;employee search:
+            </strong>{" "}
+            Interested Candidates may apply online through{" "}
+            {props.post.organisationName} website between{" "}
+            {props.post.shortStartDate} to {props.post.shortLastDate}.
           </p>
           <p>
             <strong>Important Dates to Remember:</strong>
@@ -137,7 +144,7 @@ const SarkariNaukriUpdate = (props) => {
                 <strong>
                   Starting Date for Submission of Online Application:
                 </strong>
-                07.12.2021
+                {props.post.shortStartDate}.
               </p>
             </li>
             <li>
@@ -145,7 +152,7 @@ const SarkariNaukriUpdate = (props) => {
                 <strong>
                   Last Date for Submission of Online Application:{" "}
                 </strong>
-                17.12.2021
+                {props.post.shortLastDate}.
               </p>
             </li>
           </ul>
@@ -157,12 +164,25 @@ const SarkariNaukriUpdate = (props) => {
               <p>
                 <strong>Detail Advertisement Link:&nbsp;</strong>
                 <a
-                  href="https://drive.google.com/file/d/1HiEX7vDCo99KnLBeMJYjVzgJ-vYGtbe6/view"
+                  href={props.post.officialNotification}
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-mce-href="https://drive.google.com/file/d/1HiEX7vDCo99KnLBeMJYjVzgJ-vYGtbe6/view"
+                  data-mce-href={props.post.officialNotification}
                 >
                   Download Now
+                </a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <strong>Application Form:&nbsp;</strong>
+                <a
+                  href={props.post.applicationForm}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-mce-href={props.post.applicationForm}
+                >
+                  Apply Now
                 </a>
               </p>
             </li>

@@ -88,6 +88,11 @@ const RojgarLive = (props) => {
           </p>
 
           <p>
+            <strong>Selection Process:</strong>&nbsp;Selection will be based on{" "}
+            {props.post.selectionProcess}.
+          </p>
+
+          <p>
             <strong>How To Apply:</strong>
           </p>
 

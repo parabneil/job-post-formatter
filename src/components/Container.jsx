@@ -3,9 +3,9 @@ import Sidebar from "../Sidebar";
 import Posts from "./Posts";
 
 const PostInfo = {
-  organisationName: "Organisation Name",
+  organisationName: "Union Public Service Commission (UPSC)",
   noOfPosts: "Various",
-  postName: "Posts",
+  postName: "Assistant",
   payScale: "as per the rules",
   expLevel: "Expert, Freshers also",
   postTime: "Full Time",
@@ -21,10 +21,10 @@ const PostInfo = {
   lastDate: "31st December 2022",
   shortStartDate: "01.01.2022",
   shortLastDate: "31.12.2022",
-  minAgeLimit: "",
-  maxAgeLimit: "",
-  ageRefDate: "",
-  selectionProcess: "",
+  minAgeLimit: "18",
+  maxAgeLimit: "60",
+  ageRefDate: "01.01.2022",
+  selectionProcess: "Interview",
   applicationType: "Application",
   officialAddress: "https://rojgar.live/",
   officialNotification: "https://rojgar.live/",
