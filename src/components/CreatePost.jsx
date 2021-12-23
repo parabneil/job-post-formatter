@@ -212,12 +212,16 @@ const CreatePost = (props) => {
           placeholder="Location"
           onChange={handlePostLocation}
         />
-        <input
+        <textarea
           type="text"
           placeholder="Application fees"
           onChange={handleApplicationFees}
         />
-        <input type="text" placeholder="Education" onChange={handleEducation} />
+        <textarea
+          type="text"
+          placeholder="Education"
+          onChange={handleEducation}
+        />
         <input
           type="text"
           placeholder="Short Education"

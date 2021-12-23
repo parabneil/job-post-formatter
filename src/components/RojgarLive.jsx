@@ -6,7 +6,10 @@ const RojgarLive = (props) => {
       <h2 style={{ textAlign: "center" }}>ROJGAR LIVE</h2>
       <div class="postBody">
         <h1>
-          <span class="title"></span>
+          <span class="title">
+            {props.post.organisationName} Recruitment - {props.post.noOfPosts}{" "}
+            {props.post.postName} Posts - {props.post.shortEducation} Apply Now
+          </span>
         </h1>
         <div style={{ overflowY: "hidden" }}>
           <p>
