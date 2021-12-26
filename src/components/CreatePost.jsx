@@ -194,21 +194,6 @@ const CreatePost = (props) => {
         <textarea type="text" placeholder="Salary" onChange={handlePayScale} />
         <input
           type="text"
-          placeholder="Expert / Fresher"
-          onChange={handleExpLevel}
-        />
-        <input
-          type="text"
-          placeholder="Full Time / Part Time"
-          onChange={handlePostTime}
-        />
-        <input
-          type="text"
-          placeholder="Permanent / Temporary"
-          onChange={handlePostStatus}
-        />
-        <input
-          type="text"
           placeholder="Location"
           onChange={handlePostLocation}
         />
@@ -226,16 +211,6 @@ const CreatePost = (props) => {
           type="text"
           placeholder="Short Education"
           onChange={handleShortEducation}
-        />
-        <input
-          type="text"
-          placeholder="Experience"
-          onChange={handleExperience}
-        />
-        <input
-          type="text"
-          placeholder="Skills & Knowledge"
-          onChange={handleSkills}
         />
         <input
           type="text"

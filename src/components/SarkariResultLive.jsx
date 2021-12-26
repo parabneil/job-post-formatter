@@ -7,8 +7,19 @@ const SarkariResultLive = (props) => {
       <div class="postBody">
         <h1>
           <span class="title">
-            {props.post.organisationName} Recruitment - {props.post.noOfPosts}{" "}
-            {props.post.postName} Posts - {props.post.shortEducation} Apply Now
+            {props.post.organisationName} Recruitment -{" "}
+            {props.post.noOfPosts === 1
+              ? props.post.postName + " Post"
+              : props.post.noOfPosts <= 99
+              ? props.post.postName + " Posts"
+              : props.post.noOfPosts > 99
+              ? props.post.noOfPosts + " " + props.post.postName + " Posts"
+              : null}{" "}
+            -{" "}
+            {props.post.shortEducation !== "Degree"
+              ? props.post.shortEducation + " Pass"
+              : null}{" "}
+            Apply Now
           </span>
         </h1>
         <div style={{ overflowY: "hidden" }}>
@@ -164,6 +175,8 @@ const SarkariResultLive = (props) => {
                     Download Now
                   </a>
                 </td>
+              </tr>
+              <tr>
                 <td colspan="2" width="623">
                   Application Form:&nbsp;
                   <a
