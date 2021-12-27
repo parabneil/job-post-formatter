@@ -61,21 +61,21 @@ const SarkariResultLive = (props) => {
             </tbody>
           </table>
           <p>
-            As per above information {props.post.organisationName}&nbsp;publish
-            job notification for the {props.post.postName}&nbsp;Posts. There are{" "}
-            {props.post.noOfPosts} vacancies and all are postings for{" "}
-            {props.post.postLocation}. Salary will be provided as mention in
-            above chart and for experience candidate it will be decided as per
-            skills and experience. We requesting all interested candidate to
-            check all the given information before apply the given job post. We
-            are just collecting all available job opening information and
-            publishing one place to benefit people. We are not charging or
-            requesting any money against our service. You have to ensure and
-            validate information before apply for the job. All the Job
-            eligibility requirement and criteria regarding this job posing i.e.
-            age limit, qualification, selection procedure, pay scale (pay band),
-            how to apply, Syllabus &amp; exam pattern, written test, examination
-            date, application fees are given below.
+            As per the above information, {props.post.organisationName}
+            &nbsp;publishes job notifications for the {props.post.postName}
+            &nbsp;Posts. There are {props.post.noOfPosts} vacancies and all are
+            postings for {props.post.postLocation}. Salary will be provided as
+            mentioned in the above chart and for experienced candidates, it will
+            be decided as per skills and experience. We request all interested
+            candidates to check all the given information before apply the given
+            job post. We are just collecting all available job opening
+            information and publishing one place to benefit people. We are not
+            charging or requesting any money against our service. You have to
+            ensure and validate information before applying for the job. All the
+            Job eligibility requirements and criteria regarding this job posing
+            i.e. age limit, qualification, selection procedure, pay scale (pay
+            band), how to apply, Syllabus &amp; exam pattern, written test,
+            examination date, application fees are given below.
           </p>
           <table>
             <tbody>
@@ -102,8 +102,8 @@ const SarkariResultLive = (props) => {
                   <strong>Age Limit:&nbsp;</strong>
                 </td>
                 <td width="312">
-                  The applicant's age limit must be minimum of{" "}
-                  {props.post.minAgeLimit} years and maximum of{" "}
+                  The applicant's age limit must be a minimum of{" "}
+                  {props.post.minAgeLimit} years and a maximum of{" "}
                   {props.post.maxAgeLimit} years as on {props.post.ageRefDate}.
                 </td>
               </tr>
@@ -136,9 +136,9 @@ const SarkariResultLive = (props) => {
           </table>
           <p>
             How to Apply {props.post.organisationName} employee search:
-            Interested Candidates may apply online through website Via online
-            via apply link, Before apply also check advertisement PDF and
-            information which given end of the post
+            Interested Candidates may apply online through the website Via
+            online via the apply link, Before apply also check the advertisement
+            PDF and information given end of the post
           </p>
           <table>
             <tbody>
@@ -191,8 +191,8 @@ const SarkariResultLive = (props) => {
               </tr>
               <tr>
                 <td colspan="2" width="623">
-                  Check All Job Detail from Official website Before Apply for
-                  the Respective Job Post
+                  Check All Job Detail from the Official website Before Applying
+                  for the Respective Job Post
                 </td>
               </tr>
             </tbody>

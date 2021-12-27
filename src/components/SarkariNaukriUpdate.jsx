@@ -27,10 +27,10 @@ const SarkariNaukriUpdate = (props) => {
             {props.post.organisationName} Recruitment [current_date format='Y']
             find employees for the post of {props.post.noOfPosts}{" "}
             {props.post.postName} Vacancies in {props.post.postLocation}.
-            Employment job sites publish the notification and done the Job
-            posting on job search board. This is a great chance for interested
+            Employment job sites publish the notification and do the job posting
+            on the job search board. This is a great chance for interested
             candidates who are looking for Sarkari Naukri / Government Jobs.
-            They all can apply online mode before or on Last Date{" "}
+            They all can apply online mode before or on the Last Date{" "}
             {props.post.lastDate}.
           </p>
           <p>

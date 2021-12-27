@@ -90,8 +90,8 @@ const RojgarLive = (props) => {
           </p>
 
           <p>
-            <strong>Age Limit:</strong>&nbsp;Applicants age limit must be
-            minimum of {props.post.minAgeLimit} years and maximum of{" "}
+            <strong>Age Limit:</strong>&nbsp;Applicant's age limit must be a
+            minimum of {props.post.minAgeLimit} years and a maximum of{" "}
             {props.post.maxAgeLimit} years as on {props.post.ageRefDate}. For
             Age relaxation, Check the official notification publish on their
             official website.
@@ -139,21 +139,21 @@ const RojgarLive = (props) => {
           <p>
             Please submit an online application with your resume and a cover
             letter explaining your interest in this position. If you have
-            further questions, Visit the Official website.
+            further questions, visit the Official website.
           </p>
 
           <p>
             NOTICE OF JOB OPENING This company is committed to the principles of
             equal employment opportunity and is committed to making employment
-            decisions based on merit. before Apply the job visit employer
-            official website and verify the employment-related detail by
-            your&nbsp;Own. We are providing equal employment opportunities, as
-            well as Guidance in all job and career opportunity and related terms
-            and conditions of employment. The company putting efforts to keep a
-            work environment free of sexual harassment or discrimination based
-            on race, religion, ethnicity, national origin, sexual orientation,
-            physical or mental disability, marital status, age or any other
-            status protected in favor of Jobseeker.
+            decisions based on merit. before Apply the job visit employer's
+            official website and verify the employment-related detail on your
+            own. We are providing equal employment opportunities, as well as
+            Guidance in all job and career opportunities and related terms and
+            conditions of employment. The company putting efforts to keep a work
+            environment free of sexual harassment or discrimination based on
+            race, religion, ethnicity, national origin, sexual orientation,
+            physical or mental disability, marital status, age, or any other
+            status protected in favor of the Jobseeker.
           </p>
         </div>
       </div>

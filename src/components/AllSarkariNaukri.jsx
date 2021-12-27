@@ -35,12 +35,12 @@ const AllSarkariNaukri = (props) => {
             official link given below.
           </p>
           <p>
-            Education qualification to apply for this job is{" "}
+            The education qualification to apply for this job is{" "}
             {props.post.shortEducation} Pass. After getting selected candidates
-            can get payments {props.post.payScale}.{" "}
+            can get payments of {props.post.payScale}.{" "}
             {props.post.organisationName} has started accepting an application
             from {props.post.startDate} to {props.post.lastDate}. So, candidates
-            who need to apply for this jobs kindly apply as soon as possible.
+            who need to apply for these jobs kindly apply as soon as possible.
           </p>
           <h2>
             Eligibility Criteria for {props.post.organisationName} Recruitment
@@ -86,8 +86,8 @@ const AllSarkariNaukri = (props) => {
           <p>Age Limit for the post of {props.post.postName} Vacancies.</p>
           <p>
             <strong>{props.post.postName} Posts</strong> – The Candidates age
-            limit is minimum of {props.post.minAgeLimit} years and maximum of{" "}
-            {props.post.maxAgeLimit} years as on {props.post.ageRefDate}.
+            limit is a minimum of {props.post.minAgeLimit} years and a maximum
+            of {props.post.maxAgeLimit} years as on {props.post.ageRefDate}.
           </p>
           <h2>{props.post.organisationName} Recruitment Application Fees</h2>
           <p>
@@ -109,7 +109,7 @@ const AllSarkariNaukri = (props) => {
               rel="noopener noreferrer"
               data-mce-href={props.post.officialNotification}
             >
-              Click Here
+              Click Here to Download
             </a>
           </p>
           <p>
@@ -120,7 +120,7 @@ const AllSarkariNaukri = (props) => {
               rel="noopener noreferrer"
               data-mce-href={props.post.applicationForm}
             >
-              Click Here
+              Click Here to Apply
             </a>
           </p>
         </div>
