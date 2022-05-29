@@ -39,8 +39,9 @@ const AllSarkariNaukri = (props) => {
             {props.post.shortEducation} Pass. After getting selected candidates
             can get payments of {props.post.payScale}.{" "}
             {props.post.organisationName} has started accepting an application
-            from {props.post.startDate} to {props.post.lastDate}. So, candidates
-            who need to apply for these jobs kindly apply as soon as possible.
+            from {props.post.shortStartDate} to {props.post.shortLastDate}. So,
+            candidates who need to apply for these jobs kindly apply as soon as
+            possible.
           </p>
           <h2>
             Eligibility Criteria for {props.post.organisationName} Recruitment

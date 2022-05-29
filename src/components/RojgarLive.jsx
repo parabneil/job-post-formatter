@@ -1,105 +1,125 @@
 import React from "react";
 
-const RojgarLive = (props) => {
+const RojgarLive = ({ post }) => {
   return (
     <div>
       <h2 style={{ textAlign: "center" }}>ROJGAR LIVE</h2>
       <div class="postBody">
         <h1>
           <span class="title">
-            {props.post.organisationName} Recruitment -{" "}
-            {props.post.noOfPosts === 1
-              ? props.post.postName + " Post"
-              : props.post.noOfPosts <= 99
-              ? props.post.postName + " Posts"
-              : props.post.noOfPosts > 99
-              ? props.post.noOfPosts + " " + props.post.postName + " Posts"
+            {post.organisationName} Recruitment -{" "}
+            {post.noOfPosts === 1
+              ? post.postName + " Post"
+              : post.noOfPosts <= 99
+              ? post.postName + " Posts"
+              : post.noOfPosts > 99
+              ? post.noOfPosts + " " + post.postName + " Posts"
               : null}{" "}
             -{" "}
-            {props.post.shortEducation !== "Degree"
-              ? props.post.shortEducation + " Pass"
+            {post.shortEducation !== "Degree"
+              ? post.shortEducation + " Pass"
               : null}{" "}
             Apply Now
           </span>
         </h1>
         <div style={{ overflowY: "hidden" }}>
           <p>
-            {props.post.organisationName} has positions open for{" "}
-            {props.post.noOfPosts} {props.post.postName} Posts in{" "}
-            {props.post.postLocation}. All positions require a minimum{" "}
-            {props.post.shortEducation} Pass candidate. The closing date for
-            applications is {props.post.lastDate}. Interested persons should
-            submit an application online with a resume and a cover letter.
+            {post.organisationName} has positions open for {post.noOfPosts}{" "}
+            {post.postName} Posts in {post.postLocation}. All positions require
+            a minimum {post.shortEducation} Pass candidate. The closing date for
+            applications is {post.lastDate}. Interested persons should submit an
+            application online with a resume and a cover letter.
           </p>
 
           <p>
-            <strong>Position/Title:</strong>&nbsp;{props.post.noOfPosts}{" "}
-            {props.post.postName} Vacancies.
+            <strong>Position/Title:</strong>&nbsp;{post.noOfPosts}{" "}
+            {post.postName} Vacancies.
           </p>
           <p>
-            <strong>Department:</strong>&nbsp;{props.post.organisationName}.
+            <strong>Department:</strong>&nbsp;{post.organisationName}.
           </p>
           <p>
             <strong>Pay Scale:</strong>&nbsp;Candidates will get paid{" "}
-            {props.post.payScale}.
-          </p>
-
-          <p>
-            <strong>Expert – Fresher:</strong>&nbsp;{props.post.expLevel} apply.
-          </p>
-
-          <p>
-            <strong>Part-Time – Full Time:</strong>&nbsp;{props.post.postTime}.
-          </p>
-
-          <p>
-            <strong>Temporary – Permanent:</strong>&nbsp;{props.post.postStatus}
+            {post.payScale.length === 0
+              ? "as per the rules"
+              : post.payScale.length === 1
+              ? post.payScale[0]
+              : "as follows:"}
             .
+            {post.payScale.length > 1 ? (
+              <ul>
+                {Object.values(post.payScale).map((item) => {
+                  return <li>{item}</li>;
+                })}
+              </ul>
+            ) : null}
           </p>
 
           <p>
-            <strong>Location:</strong>&nbsp;{props.post.postLocation}.
+            <strong>Expert – Fresher:</strong>&nbsp;{post.expLevel} apply.
           </p>
 
           <p>
-            <strong>Application Fee:</strong>&nbsp;{props.post.applicationFees}.
+            <strong>Part-Time – Full Time:</strong>&nbsp;{post.postTime}.
           </p>
 
-          <h3>Minimum Requirement {props.post.organisationName}:</h3>
+          <p>
+            <strong>Temporary – Permanent:</strong>&nbsp;{post.postStatus}.
+          </p>
+
+          <p>
+            <strong>Location:</strong>&nbsp;{post.postLocation}.
+          </p>
+
+          <p>
+            <strong>Application Fee:</strong>&nbsp;{post.applicationFees}.
+          </p>
+
+          <h3>Minimum Requirement {post.organisationName}:</h3>
 
           <p>
             <strong>Education:</strong>&nbsp; All Interested Candidates should
-            have completed the {props.post.education} or its equivalent
-            qualification from a recognized Board / University.
+            have completed the {post.education} or its equivalent qualification
+            from a recognized Board / University.
           </p>
 
           <p>
-            <strong>Experience:</strong>&nbsp;{props.post.experience}.
+            <strong>Experience:</strong>&nbsp;{post.experience}.
           </p>
 
           <p>
-            <strong>Skills and Knowledge:</strong>&nbsp;{props.post.skills}.
+            <strong>Skills and Knowledge:</strong>&nbsp;{post.skills}.
           </p>
 
           <p>
-            <strong>Position Posting Date:</strong>&nbsp;{props.post.startDate}.
+            <strong>Position Posting Date:</strong>&nbsp;{post.startDate}.
           </p>
 
           <p>
-            <strong>Position Closing Date:</strong>&nbsp;{props.post.lastDate}.
+            <strong>Position Closing Date:</strong>&nbsp;{post.lastDate}.
           </p>
 
           <p>
-            <strong>Age Limit:</strong>&nbsp;Applicant's age limit must be a
-            minimum of {props.post.minAgeLimit} years and a maximum of{" "}
-            {props.post.maxAgeLimit} years as on {props.post.ageRefDate}. For
-            Age relaxation, Check the official notification publish on their
+            <strong>Age Limit:</strong>&nbsp;Applicant's age limit must be
+            {post.minAgeLimit
+              ? "a minimum of " + post.minAgeLimit + " years"
+              : ""}
+            {post.minAgeLimit && post.maxAgeLimit
+              ? " and "
+              : !post.minAgeLimit && !post.maxAgeLimit
+              ? " as per the rules"
+              : ""}
+            {post.maxAgeLimit
+              ? "a maximum of " + post.maxAgeLimit + " years"
+              : ""}{" "}
+            {post.ageRefDate ? "as on " + post.ageRefDate : ""}. For Age
+            relaxation, Check the official notification publish on their
             official website.
           </p>
 
           <p>
             <strong>Selection Process:</strong>&nbsp;Selection will be based on{" "}
-            {props.post.selectionProcess}.
+            {post.selectionProcess}.
           </p>
 
           <p>
@@ -108,17 +128,17 @@ const RojgarLive = (props) => {
 
           <p>
             Candidates who fulfill the required eligibility may apply online at
-            {props.post.organisationName}’s website {props.post.officialAddress}{" "}
-            from {props.post.shortStartDate} to {props.post.shortLastDate}.
+            {post.organisationName}’s website {post.officialAddress} from{" "}
+            {post.shortStartDate} to {post.shortLastDate}.
           </p>
 
           <p>
             Official Notification:&nbsp;
             <a
               rel="noreferrer noopener"
-              href={props.post.officialNotification}
+              href={post.officialNotification}
               target="_blank"
-              data-mce-href={props.post.officialNotification}
+              data-mce-href={post.officialNotification}
             >
               Click Here to Download
             </a>
@@ -128,9 +148,9 @@ const RojgarLive = (props) => {
             Application Form:&nbsp;
             <a
               rel="noreferrer noopener"
-              href={props.post.applicationForm}
+              href={post.applicationForm}
               target="_blank"
-              data-mce-href={props.post.applicationForm}
+              data-mce-href={post.applicationForm}
             >
               Click Here to Apply
             </a>

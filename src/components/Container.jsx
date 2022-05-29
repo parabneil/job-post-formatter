@@ -6,7 +6,7 @@ const PostInfo = {
   organisationName: "Union Public Service Commission (UPSC)",
   noOfPosts: "Various",
   postName: "Assistant",
-  payScale: "as per the rules",
+  payScale: "",
   expLevel: "Expert, Freshers also",
   postTime: "Full Time",
   postStatus: "Permanent",

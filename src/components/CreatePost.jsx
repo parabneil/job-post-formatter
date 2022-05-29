@@ -25,28 +25,7 @@ const CreatePost = (props) => {
   const handlePayScale = (event) => {
     props.setPost((post) => ({
       ...post,
-      payScale: event.target.value,
-    }));
-  };
-
-  const handleExpLevel = (event) => {
-    props.setPost((post) => ({
-      ...post,
-      expLevel: event.target.value,
-    }));
-  };
-
-  const handlePostTime = (event) => {
-    props.setPost((post) => ({
-      ...post,
-      postTime: event.target.value,
-    }));
-  };
-
-  const handlePostStatus = (event) => {
-    props.setPost((post) => ({
-      ...post,
-      postStatus: event.target.value,
+      payScale: event.target.value.split("`"),
     }));
   };
 
@@ -75,20 +54,6 @@ const CreatePost = (props) => {
     props.setPost((post) => ({
       ...post,
       shortEducation: event.target.value,
-    }));
-  };
-
-  const handleExperience = (event) => {
-    props.setPost((post) => ({
-      ...post,
-      experience: event.target.value,
-    }));
-  };
-
-  const handleSkills = (event) => {
-    props.setPost((post) => ({
-      ...post,
-      skills: event.target.value,
     }));
   };
 

@@ -23,6 +23,16 @@ const SarkariResultLive = (props) => {
           </span>
         </h1>
         <div style={{ overflowY: "hidden" }}>
+          <p>
+            We are just collecting all available job opening information and
+            publishing one place to benefit people. We are not charging or
+            requesting any money against our service. You have to ensure and
+            validate information before applying for the job. All the Job
+            eligibility requirements and criteria regarding this job posing i.e.
+            age limit, qualification, selection procedure, pay scale (pay band),
+            how to apply, Syllabus &amp; exam pattern, written test, examination
+            date, and application fees are given below.
+          </p>
           <table>
             <tbody>
               <tr>
