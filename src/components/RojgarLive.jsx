@@ -7,19 +7,19 @@ const RojgarLive = ({ post }) => {
       <div class="postBody">
         <h1>
           <span class="title">
-            {post.organisationName} Recruitment -{" "}
+            {post.organisationName
+              ? post.organisationName
+              : "Organization Name"}{" "}
+            Recruitment -{" "}
             {post.noOfPosts === 1
               ? post.postName + " Post"
               : post.noOfPosts <= 99
               ? post.postName + " Posts"
               : post.noOfPosts > 99
               ? post.noOfPosts + " " + post.postName + " Posts"
-              : null}{" "}
-            -{" "}
-            {post.shortEducation !== "Degree"
-              ? post.shortEducation + " Pass"
-              : null}{" "}
-            Apply Now
+              : "Various Posts"}{" "}
+            - {post.shortEducation ? post.shortEducation + " Pass" : null} Apply
+            Now
           </span>
         </h1>
         <div style={{ overflowY: "hidden" }}>
@@ -40,12 +40,11 @@ const RojgarLive = ({ post }) => {
           </p>
           <p>
             <strong>Pay Scale:</strong>&nbsp;Candidates will get paid{" "}
-            {post.payScale.length === 0
-              ? "as per the rules"
-              : post.payScale.length === 1
+            {post.payScale && post.payScale.length === 1
               ? post.payScale[0]
-              : "as follows:"}
-            .
+              : post.payScale
+              ? "as follows:"
+              : "as per the rules."}
             {post.payScale.length > 1 ? (
               <ul>
                 {Object.values(post.payScale).map((item) => {
@@ -56,15 +55,15 @@ const RojgarLive = ({ post }) => {
           </p>
 
           <p>
-            <strong>Expert – Fresher:</strong>&nbsp;{post.expLevel} apply.
+            <strong>Expert – Fresher:</strong>&nbsp;Expert, Freshers also apply.
           </p>
 
           <p>
-            <strong>Part-Time – Full Time:</strong>&nbsp;{post.postTime}.
+            <strong>Part-Time – Full Time:</strong>&nbsp;Full Time.
           </p>
 
           <p>
-            <strong>Temporary – Permanent:</strong>&nbsp;{post.postStatus}.
+            <strong>Temporary – Permanent:</strong>&nbsp;Permanent.
           </p>
 
           <p>
@@ -102,7 +101,7 @@ const RojgarLive = ({ post }) => {
           <p>
             <strong>Age Limit:</strong>&nbsp;Applicant's age limit must be
             {post.minAgeLimit
-              ? "a minimum of " + post.minAgeLimit + " years"
+              ? " a minimum of " + post.minAgeLimit + " years"
               : ""}
             {post.minAgeLimit && post.maxAgeLimit
               ? " and "
@@ -110,9 +109,9 @@ const RojgarLive = ({ post }) => {
               ? " as per the rules"
               : ""}
             {post.maxAgeLimit
-              ? "a maximum of " + post.maxAgeLimit + " years"
-              : ""}{" "}
-            {post.ageRefDate ? "as on " + post.ageRefDate : ""}. For Age
+              ? " a maximum of " + post.maxAgeLimit + " years"
+              : ""}
+            {post.ageRefDate ? " as on " + post.ageRefDate : ""}. For Age
             relaxation, Check the official notification publish on their
             official website.
           </p>
@@ -127,7 +126,7 @@ const RojgarLive = ({ post }) => {
           </p>
 
           <p>
-            Candidates who fulfill the required eligibility may apply online at
+            Candidates who fulfill the required eligibility may apply online at{" "}
             {post.organisationName}’s website {post.officialAddress} from{" "}
             {post.shortStartDate} to {post.shortLastDate}.
           </p>

@@ -6,7 +6,7 @@ const PostInfo = {
   organisationName: "Union Public Service Commission (UPSC)",
   noOfPosts: "Various",
   postName: "Assistant",
-  payScale: "",
+  payScale: "as per the rules",
   expLevel: "Expert, Freshers also",
   postTime: "Full Time",
   postStatus: "Permanent",
@@ -26,9 +26,9 @@ const PostInfo = {
   ageRefDate: "01.01.2022",
   selectionProcess: "Interview",
   applicationType: "Application",
-  officialAddress: "https://rojgar.live/",
-  officialNotification: "https://rojgar.live/",
-  applicationForm: "https://rojgar.live/",
+  officialAddress: "",
+  officialNotification: "",
+  applicationForm: "",
 };
 
 const Container = () => {
