@@ -20,7 +20,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 35vh;
+  height: 100vh;
   width: 100vw;
   text-align: center;
   background-color: white;
@@ -30,7 +30,7 @@ body {
 
 .orgName1 {
   font-size: 150px;
-  background-color: #42a0d8;
+  color: #42a0d8;
   padding: 1vh;
   letter-spacing: 50px;
   transition: 200ms ease-in;
@@ -38,8 +38,7 @@ body {
 
 .orgName2 {
   font-size: 90px;
-  background-color: #add7f0;
-  color: #42a0d8;
+  color: #add7f0;
   padding: 2vh;
   letter-spacing: 30px;
   transition: 500ms ease-in;
@@ -47,7 +46,6 @@ body {
 
 .loader {
   background-color: white;
-  height: 65vh;
   width: 100vw;
   display: flex;
   justify-content: center;
@@ -55,7 +53,7 @@ body {
 }
 
 .loader img {
-  height: 95%;
+  height: 40vh;
 }
 
 .header {
